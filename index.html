@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Geladinhos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestão de Geladinhos</h1>
+    
+    <div class="form-group">
+        <label for="precoUnidade">Preço por unidade (R$):</label>
+        <input type="number" id="precoUnidade" step="0.01" placeholder="Digite o preço">
+        <button onclick="atualizarPreco()">Atualizar Preço</button>
+      </div>     
+
+    <div class="form-group">
+      <label for="qtdGeladinhos">Quantidade de Geladinhos:</label>
+      <input type="number" id="qtdGeladinhos" placeholder="Digite a quantidade">
+      <button onclick="adicionarGeladinhos()">Adicionar ao Estoque</button>
+    </div>
+
+    <div class="form-group">
+      <label for="qtdVenda">Quantidade Vendida:</label>
+      <input type="number" id="qtdVenda" placeholder="Digite a quantidade">
+      <button onclick="venderGeladinhos()">Registrar Venda</button>
+    </div>
+
+    <div class="form-group">
+      <label for="qtdFiado">Quantidade Fiado:</label>
+      <input type="number" id="qtdFiado" placeholder="Digite a quantidade">
+      <label for="nomeCliente">Cliente:</label>
+      <input type="text" id="nomeCliente" placeholder="Digite o nome do cliente">
+      <button onclick="venderFiado()">Registrar Fiado</button>
+    </div>
+
+    <div class="resumo">
+      <h2>Resumo</h2>
+      <p id="estoqueAtual">Estoque atual: 0</p>
+      <p id="totalVendasPagas">Total vendidos (pagos): 0</p>
+      <p id="totalDinheiro">Total arrecadado: R$0,00</p>
+      <h3>Totais de Fiado por Cliente</h3>
+<ul id="totaisFiado">
+  <li>Nenhum fiado registrado ainda.</li>
+</ul>
+      <p id="precoAtual">Preço por unidade: R$1,50</p>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
